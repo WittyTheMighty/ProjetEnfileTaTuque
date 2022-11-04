@@ -1,0 +1,38 @@
+version: '3.0'
+
+services:
+  
+  frontend:
+    build: 
+      context: ./frontend/
+      dockerfile: Dockerfile
+    container_name: frontend-mobile
+    depends_on:
+      - backend
+    ports:
+      - "8100:80"
+    networks:
+      - app_net
+
+
+  backend:
+    build: 
+      context: ./enfileTaTuque-backend/
+      dockerfile: Dockerfile
+    container_name: serverEnfileTaTuque
+
+    ports:
+      - "8080:8080"
+    networks:
+      - app_net
+
+    env_file:
+      - ./enfileTaTuque-backend/.env
+    environment:
+      - name=value
+
+networks:
+  app_net:
+    driver: bridge 
+
+
