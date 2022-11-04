@@ -1,0 +1,10 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{challenge.title}}</ion-card-title>
+    <ion-card-subtitle >Faites ce défi entre {{challenge.timeStart}} et {{challenge.timeEnd}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    {{challenge.description}}
+  </ion-card-content>
+  <ion-button fill="clear" (click)="destroy($event)">Complété</ion-button>
+</ion-card>

@@ -1,0 +1,7 @@
+{
+  "name": "econergie",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
